@@ -1,0 +1,1 @@
+<a class="btn btn-block btn-sm btn-black" href="{{route("$scope.$module.index",request()->all())}}">الغاء</a>
