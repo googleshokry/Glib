@@ -47,7 +47,7 @@ class GlibServiceProvider extends ServiceProvider
 
 
 
-        $this->loadRoutesFrom(__DIR__."/routes.php");
+        $this->loadRoutesFrom(__DIR__ . "/routes.php");
 
 
         $this->runLoadMigrations();

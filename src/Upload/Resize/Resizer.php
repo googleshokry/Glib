@@ -15,7 +15,7 @@ use Glib\Upload\Conf;
 /**
  * Description of Resizer
  *
- * @author jooAziz
+ * @author Eng Shokry
  */
 class Resizer {
 

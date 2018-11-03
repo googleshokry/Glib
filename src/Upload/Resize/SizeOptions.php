@@ -11,7 +11,7 @@ namespace Glib\Upload\Resize;
 /**
  * Description of SizeOptions
  *
- * @author jooAziz
+ * @author Eng Shokry
  */
 class SizeOptions {
 

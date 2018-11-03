@@ -21,7 +21,7 @@ use Illuminate\Support\Collection;
 /**
  * Description of Resize
  *
- * @author jooAziz
+ * @author Eng Shokry
  */
 class ResizeBulider
 {

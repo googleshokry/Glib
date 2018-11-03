@@ -16,7 +16,7 @@ use Glib\Support\UUID;
 /**
  * Description of Uploader
  *
- * @author jooAziz
+ * @author Eng Shokry
  */
 class Uploader {
 
