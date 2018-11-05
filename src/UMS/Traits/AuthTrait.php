@@ -34,7 +34,7 @@ trait AuthTrait
         $vaidator = $checkUser->validateLoginForm();
 
         if ($vaidator->fails()) {
-            flash()->error("من فضلك املا كل الحقول");
+            flash()->error(__t('please fill all fields'));
             return back()->withErrors($vaidator)->withInput();
         }
 
@@ -42,7 +42,7 @@ trait AuthTrait
         if ($checkUser->makeLogin())
             return UMS::instance()->redirectTo()->dashboard();
 
-        flash()->error("يرجى التأكد من أن حسابك نشط وأدخل معلومات صحيحة ، إذا كانت المشكلة لا تزال على اتصال بالمشرف");
+        flash()->error(__t('Please make sure your account is active and enter correct information if the problem is still in contact with your administrator'));
         return back();
     }
 

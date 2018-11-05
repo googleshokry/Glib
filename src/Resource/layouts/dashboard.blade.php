@@ -4,7 +4,7 @@
     <base href="{{url(env("BASE_HREF"))}}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <title>Dashboard</title>
+    <title>{!! __t('Dashboard') !!}</title>
     {{--<link href="/dashboard/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">--}}
     <link href="/dashboard/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <style>
@@ -65,28 +65,32 @@
             }
         }
 
-        .select2-container--default .select2-selection--single
-        {
+        .select2-container--default .select2-selection--single {
             min-width: 635px;
             width: 100%;
         }
 
         .bg_footer_color {
             background-color: #b5942b;
-            background-image: url(http://integrity-alnahlagroup.com/front/images/ar/footer_bg.png);
+            background-image: url({!! env("BASE_HREF") !!}front/images/ar/footer_bg.png);
             background-repeat: no-repeat;
             padding: 0px !important;
             bottom: 0;
         }
 
-        .bg_footer_color span{line-height: 10 !important; color: #fff;}
+        .bg_footer_color span {
+            line-height: 10 !important;
+            color: #fff;
+        }
 
-        .bg_footer_color span a{color: #fff;}
+        .bg_footer_color span a {
+            color: #fff;
+        }
 
     </style>
     <link href="tf/bootstrap-tokenfield.min.css" rel="stylesheet">
     <link href="dashboard/style.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
 
     <style>
 
@@ -112,7 +116,9 @@
     <div class="spinner"></div>
 </div>
 <script>
-    window.addEventListener('load', () => setTimeout(() => document.getElementById('loader').classList.add('fadeOut'), 300));
+    window.addEventListener('load', () = > setTimeout(() = > document.getElementById('loader').classList.add('fadeOut'), 300
+    ))
+    ;
 </script>
 <div>
     @include("$scope.parts.sidebar")
@@ -128,19 +134,19 @@
             <div class="row">
                 <div class="col-sm-6">
                     <span>
-                    Copyright © {{date("Y")}} Designed & Develop by
+                    {!! __t('Copyright') !!} © {{date("Y")}} {!! __t(' Designed & Develop by') !!}
 
-                    <a href="http://integrity-alnahlagroup.com" target="_blank"
-                    title="Integrity Al Nahla Group">
-                    Integrity Al Nahla Group
+                        <a href="{!! env('APP_URL') !!}" target="_blank"
+                           title="{!! env('APP_NAME') !!}">
+                    {!! env('APP_NAME') !!}
                     </a>
-
-                    . All rights reserved.
+                        {!! __t('All rights reserved') !!}
                     </span>
                 </div>
 
                 <div class="col-sm-6">
-                    <img src="http://integrity-alnahlagroup.com/front/images/ar/logo_footer.png" class="img-responsive" alt="">
+                    <img src="http://integrity-alnahlagroup.com/front/images/ar/logo_footer.png" class="img-responsive"
+                         alt="">
                 </div>
 
             </div>
@@ -175,7 +181,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"
+      rel="stylesheet"/>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 

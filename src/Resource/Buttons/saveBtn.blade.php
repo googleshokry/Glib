@@ -1,1 +1,1 @@
-<button class="btn btn-sm btn-block btn-success" value="{{$value??"index"}}" name="_submit">{{$text ?? "حفظ"}}</button>
+<button class="btn btn-sm btn-block btn-success" value="{{$value??"index"}}" name="_submit">{{$text ?? __t("Save") }}</button>

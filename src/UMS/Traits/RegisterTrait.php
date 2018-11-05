@@ -37,7 +37,7 @@ trait RegisterTrait
         $vaidator = $checkUser->validateRegisterForm();
 
         if ($vaidator->fails()) {
-            flash()->error("من فضلك املا كل الحقول");
+            flash()->error(__t('please fill all fields'));
             return back()->withErrors($vaidator)->withInput();
         }
 
@@ -51,11 +51,11 @@ trait RegisterTrait
 
 
         if ($resultOfRegistration) {
-            flash()->success("تهانينا تم إنشاء حسابك بنجاح ، يرجى التحقق من بريدك الإلكتروني بحثًا عن رابط التنشيط ");
+            flash()->success(__t('Congratulations Your account was successfully created, please check your email for the activation link'));
             return UMS::instance()->redirectTo()->login();
         }
 
-        flash()->error("يرجى التأكد من إدخال المعلومات الصحيحة");
+        flash()->error(__t('Please make sure you enter correct information'));
         return back();
     }
 
@@ -63,15 +63,15 @@ trait RegisterTrait
     {
         $token = $request->_t;
         if (!$token)
-            return $this->view(["message" => "sorry your account cant be activated, please contact with administration"], "error");
+            return $this->view(["message" => __t("sorry your account cant be activated, please contact with administration")], "error");
 
 
         $user = UMS::checkUser()->activeUser($token);
 
         if ($user)
-            flash()->success("your account active successfully");
+            flash()->success(__t("your account active successfully"));
         else
-            flash()->error("some thing wrong has occur ");
+            flash()->error(__t("some thing wrong has occur"));
 
         return redirect(UMS::instance()->getScopeConfig()->loginUrl());
     }

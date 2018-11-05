@@ -7,7 +7,7 @@
 
         {!! csrf_field() !!}
         <div class="form-group">
-            <label class="text-normal text-dark">Email</label>
+            <label class="text-normal text-dark">{!! __t('Email') !!}</label>
             <input required name="email" type="email" class="form-control" placeholder="example@mail.com">
         </div>
 
@@ -15,7 +15,7 @@
             <div class="peers ai-c jc-sb fxw-nw">
 
                 <div class="peer">
-                    <button class="btn btn-primary">Reset</button>
+                    <button class="btn btn-primary">{!! __t('Reset') !!}</button>
                 </div>
 
             </div>
@@ -25,12 +25,12 @@
             <div class="peers ai-c jc-sb fxw-nw ">
 
                 <div class="peer" style="text-align: right">
-                    You don`t have account<br/>
-                    <a href="{{auther()->getScopeConfig()->registerUrl()}}" class="">Create new one</a>
+                    {!! __t('You don`t have account') !!}<br/>
+                    <a href="{{auther()->getScopeConfig()->registerUrl()}}" class="">{!! __t('Create new one') !!}</a>
                 </div>
                 <div class="peer">
-                    Already have account<br/>
-                    <a href="{{auther()->getScopeConfig()->loginUrl()}}" class="">login here</a>
+                    {!! __t('Already have account') !!}<br/>
+                    <a href="{{auther()->getScopeConfig()->loginUrl()}}" class="">{!! __t('login here') !!}</a>
                 </div>
             </div>
         </div>

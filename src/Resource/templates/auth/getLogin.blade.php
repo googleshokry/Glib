@@ -1,21 +1,21 @@
 @extends("Glib::layouts.loginLayout")
 
-@section("title","تسجيل الدخول")
+@section("title",__t('login'))
 
 @section("content")
     <form method="post">
 
         {!! csrf_field() !!}
         <div class="form-group">
-            <label class="text-normal text-dark" style="float: right">الايميل</label>
-            <input name="{{Glib\UMS\UMS::checkUser()->getLoginField()}}" class="form-control" placeholder="John Doe">
+            <label class="text-normal text-dark" style="float: right">{!! __t('Email') !!}</label>
+            <input name="{{Glib\UMS\UMS::checkUser()->getLoginField()}}" class="form-control" placeholder="example@mail.com">
         </div>
         <div class="form-group">
-            <label class="text-normal text-dark" style="float: right">كلمة المرور</label>
+            <label class="text-normal text-dark" style="float: right">{!! __t('Password') !!}</label>
             <input name="password" type="password" class="form-control" placeholder="Password">
         </div>
         <div class="form-group">
-            <label class="text-normal text-dark" style="float: right">الروبوت</label>
+            <label class="text-normal text-dark" style="float: right">{!! __t('Robot') !!}</label>
             {!! NoCaptcha::renderJs() !!}
             {!! NoCaptcha::display() !!}
         </div>
@@ -23,7 +23,7 @@
             <div class="peers ai-c jc-sb fxw-nw">
 
                 <div class="peer">
-                    <button class="btn btn-primary" style="float: right">تسجيل الدخول</button>
+                    <button class="btn btn-primary" style="float: right">{!! __t('Login') !!}</button>
                 </div>
 
             </div>

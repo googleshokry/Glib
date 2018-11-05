@@ -15,7 +15,7 @@
     <div class="panel">
         <div class="panel-header">
             <i class="icon-check"></i>
-            <h2>{{("انشاء جديد")}}</h2>
+            <h2>{{__t("Create New")}}</h2>
             <hr/>
         </div>
         <div class="panel-content">
@@ -32,10 +32,10 @@
                     @yield("btns")
                 @else
                     <div class="col-3">
-                        @include("Glib::Buttons.saveBtn",["value"=>"create","text"=>"حفظ و انشاء جديد "])
+                        @include("Glib::Buttons.saveBtn",["value"=>"create","text"=>__t('save and create new')])
                     </div>
                     <div class="col-2">
-                        @include("Glib::Buttons.saveBtn",["value"=>"index","text"=>"حفظ و الرجوع الي السجلات"])
+                        @include("Glib::Buttons.saveBtn",["value"=>"index","text"=>__t('save and go to list')])
                     </div>
                     <div class="col-12 ">
                         <hr/>

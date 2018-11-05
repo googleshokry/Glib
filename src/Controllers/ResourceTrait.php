@@ -62,7 +62,7 @@ trait ResourceTrait
             ->with($this->getRepo()->prepareForSaving())
             ->log("insert new record in table " . $row->getTable());
 
-        flash()->success("تم");
+        flash()->success(__t("admin.Done"));
         return $this->redirectTo()->basedOnRequest();
     }
 
@@ -86,7 +86,7 @@ trait ResourceTrait
 
 
         $row->changeStatue((int)$request->status);
-        flash()->success("تم");
+        flash()->success(__t("Done"));
         return back();
     }
 
@@ -98,8 +98,6 @@ trait ResourceTrait
 
     public function update($id)
     {
-        // dd($id);
-
         $this->getValidator($id)->validate()->update($id);
 
         ActivityLog::make()
@@ -109,7 +107,7 @@ trait ResourceTrait
             ->with($this->getRepo()->prepareForUpdate())
             ->log("update record id [" . $id . "] in table " . $this->getRepo()->getModel()->getTable());
 
-        flash()->success("تم");
+        flash()->success(__t("Done"));
         return $this->redirectTo()->index();
     }
 
@@ -123,9 +121,9 @@ trait ResourceTrait
                 ->by(UMS::instance()->getUser())
                 ->log("delete record id [" . $id . "] in table " . $this->getRepo()->getModel()->getTable());
 
-            flash()->success('تم');
+            flash()->success(__t("Done"));
         } else {
-            flash()->error('يوجد خطا');
+            flash()->error(__t('error'));
         }
         return $this->redirectTo()->index();
     }

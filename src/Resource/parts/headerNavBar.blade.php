@@ -166,7 +166,7 @@
                     <li>
                         <a href="{{url(auther()->getScopeConfig()->logoutUrl())}}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                             <i class="ti-power-off mR-10"></i>
-                            <span>تسجيل خروج</span>
+                            <span>{!! __t('log out') !!}</span>
                         </a>
                     </li>
                 </ul>

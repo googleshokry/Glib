@@ -9,7 +9,7 @@
         <div class="row">
             <div style="margin-bottom: 10px" class="col-10 ">
                 <a href="{{route("$scope.$module.create",request()->all())}}" class="pull-right btn btn-primary">
-                    انشاء جديد</a>
+                    {!! __t('Create New') !!}</a>
             </div>
             <div class="col-12 ">
                 <hr/>
@@ -34,18 +34,18 @@
                         @endif
                     @endforeach
 
-                    @includeIf("Glib::parts.FilterInput",["label"=>"عدد السجلات","name"=>"limit","options"=>tableColumn()->select()->setData(["5"=>"5","10"=>"10","25"=>"25","100"=>"100","250"=>"250"])->setAlisa('عدد السجلات')  ])
+                    @includeIf("Glib::parts.FilterInput",["label"=>__t('no Records'),"name"=>"limit","options"=>tableColumn()->select()->setData(["5"=>"5","10"=>"10","25"=>"25","100"=>"100","250"=>"250"])->setAlisa(__t("no Records"))  ])
                 </div>
                 <hr/>
             </div>
 
             <div class="col-12 col-md-6 offset-md-6 col-lg-3 offset-md-9 text-center">
-                <button type="submit" class=" btn btn-primary">البحث</button>
+                <button type="submit" class=" btn btn-primary">{!! __t('search') !!}</button>
                 @if(@$export==true)
                     <a class="btn btn-danger" target="_blank"
-                       href="{{ route("$scope.admin.download",request()->query()) }}">استخراج</a>
+                       href="{{ route("$scope.admin.download",request()->query()) }}">{!! __t('Export') !!}</a>
                 @endif
-                <a href="{{ route("$scope.$module.index") }}" class=" btn btn-dark">اﻻفتراضي</a>
+                <a href="{{ route("$scope.$module.index") }}" class=" btn btn-dark">{!! __t('Reset') !!}</a>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -78,7 +78,7 @@
                 @endforeach
             @endif
 
-            <th>الأوامر</th>
+            <th>{!! __t('orders') !!}</th>
 
         </tr>
         </thead>
@@ -131,7 +131,7 @@
                         <div class="col-6 " style="padding:2px;">
                             @if(@$copy==true)
                                 <a href="javascript:void(0)" class="btn btn-primary btn-sm btn-block copyLinkTrigger"
-                                   data-url="{{url('/')}}/uploads/{{$row->image}}">نسخ</a>
+                                   data-url="{{url('/')}}/uploads/{{$row->image}}">{!! __t('copy') !!}</a>
                             @endif
                             @hasSection("view")
                                 @yield("view")

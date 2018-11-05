@@ -1,1 +1,1 @@
-<a href="{{route("$scope.$module.edit",[$module=>$row->id])}}" class="btn btn-info btn-sm btn-block">تعديل</a>
+<a href="{{route("$scope.$module.edit",[$module=>$row->id])}}" class="btn btn-info btn-sm btn-block">{!! __t("Edit") !!}</a>

@@ -7,7 +7,7 @@
     <div class="panel">
         <div class="panel-header">
             <i class="icon-check"></i>
-            <h2>{{("تعديل")}}</h2>
+            <h2>{{__t('Edit')}}</h2>
             <hr/>
         </div>
         <div class="panel-content">
@@ -23,7 +23,7 @@
                     @include("Glib::Buttons.CancelBtn")
                 </div>
                 <div class="col-2">
-                    @include("Glib::Buttons.saveBtn",["value"=>"index","text"=>"Update ".str_singular($module)])
+                    @include("Glib::Buttons.saveBtn",["value"=>"index","text"=>__t('Update')." ".__t(str_singular($module))])
                 </div>
             </div>
             @endif

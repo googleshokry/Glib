@@ -14,7 +14,7 @@
 @if((@$row instanceof \Glib\SEO\Contracts\SEOable))
 
     <hr/>
-    <h3 class="section_title">SEO Section</h3>
+    <h3 class="section_title">{!! __t('SEO Section') !!}</h3>
     <?php $input = "seo_key"; ?>
     @include("Glib::parts.formInput",["label"=>$input,"input"=>Form::text($input,@$row->seo->keywords,["class"=>"form-control tagable"])])
     <?php $input = "seo_desc"; ?>
@@ -25,7 +25,7 @@
 @if((@$row instanceof \Glib\Tag\Contracts\Tagable))
 
     <hr/>
-    <h3 class="section_title">Tags Section</h3>
+    <h3 class="section_title">{!! __t('Tags Section') !!}</h3>
     <?php $input = "tags"; ?>
     @include("Glib::parts.formInput",["label"=>$input,"input"=>Form::text($input,@$row->getTags(),["class"=>"form-control tagable"])])
 @endif

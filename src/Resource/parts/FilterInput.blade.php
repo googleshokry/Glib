@@ -16,7 +16,7 @@
     @switch($options->getType())
 
         @case("select")
-        {!! Form::select($name,$options->getData(),request()->get($name),["class"=>"form-control",'placeholder'=>__t('home.select')]) !!}
+        {!! Form::select($name,$options->getData(),request()->get($name),["class"=>"form-control",'placeholder'=>__t('select')]) !!}
         @break
         @case("date")
         {!! Form::date($name, request()->get($name),["class"=>"form-control"]) !!}

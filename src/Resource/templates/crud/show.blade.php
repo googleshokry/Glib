@@ -18,7 +18,7 @@
                 <thead>
                 <tr>
                     <th></th>
-                    <th>اﻻجابة</th>
+                    <th>{!! __t('answer') !!}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -55,11 +55,11 @@
                         <td>-------</td>
                     </tr>
                     <tr>
-                        <td><strong>SEO Section</strong></td>
+                        <td><strong>{!! __t('SEO Section') !!}</strong></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>Key words</td>
+                        <td>{!! __t('Keywords') !!}</td>
                         <td>
                             @foreach($row->getSeo()->getKeyWords()->toArray() as $keyword)
                                 <span class="btn btn-sm btn-dark " style="cursor: auto"> {{$keyword}}</span>
@@ -67,7 +67,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>description</td>
+                        <td>{!! __t('description') !!}</td>
                         <td>{{$row->getSeo()->getDescription()}}</td>
                     </tr>
                 @endif
@@ -77,11 +77,11 @@
                         <td>-------</td>
                     </tr>
                     <tr>
-                        <td><strong>Tags Section</strong></td>
+                        <td><strong>{!! __t('Tags Section') !!}</strong></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>Key words</td>
+                        <td>{!! __t('Keywords') !!}</td>
                         <td>
                             @foreach($row->getCollection() as $tagname)
                                 <span class="btn btn-sm btn-dark " style="cursor: auto"> {{$tagname}}</span>
@@ -96,7 +96,7 @@
                         <td>-------</td>
                     </tr>
                     <tr>
-                        <td><strong>التعليقات</strong></td>
+                        <td><strong>{!! __t('Comments') !!}</strong></td>
                         <td></td>
                     </tr>
                     <tr>
@@ -106,10 +106,10 @@
                         <table class="table  table-striped">
                             <thead>
                             <tr>
-                                <th>الشخص</th>
-                                {{--<th>Rate</th>--}}
-                                <th>التلعيقات</th>
-                                <th>الملفات</th>
+                                <th>{!! __t('Person') !!}</th>
+                                <th>{!! __t('Rate') !!}</th>
+                                <th>{!! __t('Comments') !!}</th>
+                                <th>{!! __t('Files') !!}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -131,10 +131,10 @@
                         {!! Form::model(@$row,['url' =>route("admin.admin.updateReviewRecord"), 'method' => 'post','class'=>'form-horizontal style-form','enctype'=>'multipart/form-data'] ) !!}
 
                         <?php $input = "comment"; ?>
-                        @include("Glib::parts.formInput",["label"=>'التعليق',"input"=>Form::text($input,@$row->{$input},["class"=>"form-control richText","placeholder"=>'التعليق'])])
+                        @include("Glib::parts.formInput",["label"=>__t('Comment'),"input"=>Form::text($input,@$row->{$input},["class"=>"form-control richText","placeholder"=>__t('Comment')])])
 
                         {!! Form::hidden('id',@$row->id) !!}
-                        @include("Glib::Buttons.saveBtn",["value"=>"create","text"=>"اضافه"])
+                        @include("Glib::Buttons.saveBtn",["value"=>"create","text"=>__t('Add')])
 
 
                         {!! Form::close() !!}
