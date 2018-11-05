@@ -2,6 +2,7 @@
 
 namespace Glib;
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Glib\Validations\ValidationsRulesBoot;
 use File;
@@ -36,6 +37,7 @@ class GlibServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
 
         ValidationsRulesBoot::boot();
 
