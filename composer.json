@@ -33,7 +33,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Glib\\GlibServiceProvider"
+        "Glib\\src\\GlibServiceProvider"
       ]
     }
   }
