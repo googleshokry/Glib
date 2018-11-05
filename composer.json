@@ -20,12 +20,12 @@
   },
   "autoload": {
     "psr-4": {
-      "GoogleShokry\\Glib\\": "src/"
+      "Glib\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "GoogleShokry\\Glib\\Test\\": "tests/"
+      "GoogleShokry\\Glib\\": "tests/"
     }
   },
   "minimum-stability":"dev",
