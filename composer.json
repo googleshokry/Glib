@@ -33,7 +33,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "googleshokry\\glib\\src\\GlibServiceProvider"
+        "Glib\\GlibServiceProvider"
       ]
     }
   }
