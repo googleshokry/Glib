@@ -23,16 +23,6 @@
     "psr-4": {
       "Glib\\": "src/"
     }
-//  ,
-//    "files": [
-//      "src/Helpers/Auther.php",
-//      "src/Helpers/Controller.php",
-//      "src/Helpers/Dimensions.php",
-//      "src/Helpers/Lang.php",
-//      "src/Helpers/Media.php",
-//      "src/Helpers/Seo.php",
-//      "src/Helpers/trans.php"
-//    ]
   },
   "autoload-dev": {
     "psr-4": {
