@@ -54,6 +54,7 @@ trait GlibHelperController
 
         $activeView = $view ?? (self::$_scope . "." . self::$_module . "." . $action);
 
+//        dd($data);
         return view($activeView, $data);
     }
 

@@ -21,6 +21,7 @@ class SharedVars
     {
         /** @var Route $route */
         $route = $request->route();
+
         $scope =explode("/", trim($route->getPrefix() ?? "front", "/"))[0];
 
         try {
