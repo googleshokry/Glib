@@ -11,6 +11,11 @@
  ```
  Kernel
  ```
+ 
+ Add Prodvider in app
+ ```
+ Glib\GlibServiceProvider::class
+ ```
  ###### Any Controller Rename To Home From Home Controller
  
  ## How To create Module  Example
